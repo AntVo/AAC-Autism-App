@@ -13,9 +13,11 @@ export default class SentenceBar extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: .2,
+    flex: .15,
     backgroundColor: 'floralwhite',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    alignSelf: 'stretch',
   },
 });

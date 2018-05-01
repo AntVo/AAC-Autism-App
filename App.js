@@ -5,6 +5,17 @@ import SentenceBar from './SentenceBar';
 import CardsGallery from './CardsGallery';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sentenceBar: [],
+    };
+  }
+
+  addCardToSentenceBar = () => {
+    
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -20,6 +31,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
