@@ -1,15 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Card from './Card';
+import SentenceBarCard from './SentenceBarCard';
 
 export default class SentenceBar extends React.Component {
 
   renderSentenceBar = () => {
     console.log(this.props.sentenceBar);
     return (
-      this.props.sentenceBar.map((card) => {
+      this.props.sentenceBar.map((card, key) => {
         return(
-          <Card image={card.image} />
+          <SentenceBarCard key={key} image={card.image} />
         )
       })
     )
@@ -32,5 +33,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexDirection: 'row',
     alignSelf: 'stretch',
+    marginTop: 10,
   },
 });

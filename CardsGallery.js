@@ -15,6 +15,9 @@ export default class CardsGallery extends React.Component {
         <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
         <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
         <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
+        <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} word={"i"} />
+        <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} word={"i"} />
+
       </View>
     );
   }
@@ -22,11 +25,11 @@ export default class CardsGallery extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: .85,
+    flex: .75,
     backgroundColor: 'aliceblue',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     marginTop: 20,
   },
 });

@@ -3,6 +3,7 @@ import { SuperGridSectionList } from 'react-native-super-grid';
 import { StyleSheet, Text, View } from 'react-native';
 import SentenceBar from './SentenceBar';
 import CardsGallery from './CardsGallery';
+import BottomNavBar from './BottomNavBar';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <SentenceBar sentenceBar={this.state.sentenceBar} />
         <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} />
+        <BottomNavBar />
       </View>
     );
   }

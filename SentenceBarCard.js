@@ -1,30 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 
-export default class Card extends React.Component {
+export default class SentenceBarCard extends React.Component {
 
-  
-handlePress = () => {
-  this.props.addCardToSentenceBar( this.props.image, this.props.word );
-}
 
 render() {
     return (
-      <TouchableHighlight onPress={this.handlePress}>
+      <View  style={styles.container} >
         <Image style={styles.image} source={this.props.image} />
-      </TouchableHighlight>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
 
-
   image: {
-    margin: 10,
     height: 60,
     width: 60,
-    borderWidth: 2,
+    borderWidth: 1,
   }
-
+ 
 });
