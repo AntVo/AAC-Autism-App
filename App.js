@@ -12,15 +12,22 @@ export default class App extends React.Component {
     };
   }
 
-  addCardToSentenceBar = () => {
-    
+  addCardToSentenceBar = (image, word) => {
+    const sbar = this.state.sentenceBar;
+    const card = {
+      image: image,
+      word: word,
+    }
+    sbar.push(card);
+    this.setState({ sentenceBar: sbar });
+
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <SentenceBar />
-        <CardsGallery />
+        <SentenceBar sentenceBar={this.state.sentenceBar} />
+        <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} />
       </View>
     );
   }

@@ -1,24 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 
 export default class Card extends React.Component {
 
   
+handlePress = () => {
+  console.log(this.props.image);
+  this.props.addCardToSentenceBar( this.props.image, this.props.word );
+}
+
 render() {
     return (
-      <View>
+      <TouchableHighlight onPress={this.handlePress}>
         <Image style={styles.image} source={this.props.image} />
-      </View>
+      </TouchableHighlight>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'aliceblue',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
 
   image: {
     height: 100,

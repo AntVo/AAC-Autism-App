@@ -9,12 +9,12 @@ export default class CardsGallery extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Card image={images.i}/>
-        <Card image={images.ilike}/>
-        <Card image={images.isee}/>
-        <Card image={images.iwant}/>
-        <Card image={images.happy}/>
-        <Card image={images.thirsty}/>
+        <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} word={"i"} />
+        <Card image={images.ilike} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
+        <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
+        <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
+        <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
+        <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
       </View>
     );
   }
