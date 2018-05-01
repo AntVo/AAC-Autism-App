@@ -1,15 +1,11 @@
 import React from 'react';
-import { SuperGridSectionList } from 'react-native-super-grid';
 import { StyleSheet, Text, View } from 'react-native';
-import SentenceBar from './SentenceBar';
-import CardsGallery from './CardsGallery';
 
-export default class App extends React.Component {
+export default class SentenceBar extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <SentenceBar />
-        <CardsGallery />
+        <Text>Sentence Bar</Text>
       </View>
     );
   }
@@ -17,8 +13,8 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: .2,
+    backgroundColor: 'floralwhite',
     alignItems: 'center',
     justifyContent: 'center',
   },
