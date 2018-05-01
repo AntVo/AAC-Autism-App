@@ -6,7 +6,6 @@ import SentenceBarCard from './SentenceBarCard';
 export default class SentenceBar extends React.Component {
 
   renderSentenceBar = () => {
-    console.log(this.props.sentenceBar);
     return (
       this.props.sentenceBar.map((card, key) => {
         return(

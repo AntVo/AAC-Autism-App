@@ -9,6 +9,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentBoard: 'basic',
+      // default, emotion, fun, food, animal, activity
       sentenceBar: [],
     };
   }
@@ -21,15 +23,20 @@ export default class App extends React.Component {
     }
     sbar.push(card);
     this.setState({ sentenceBar: sbar });
-
   }
+
+  setBoard = (board) => {
+    console.log(board);
+    this.setState({ currentBoard: board });
+  }
+
 
   render() {
     return (
       <View style={styles.container}>
         <SentenceBar sentenceBar={this.state.sentenceBar} />
-        <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} />
-        <BottomNavBar />
+        <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} currentBoard={this.state.currentBoard} />
+        <BottomNavBar setBoard={this.setBoard} />
       </View>
     );
   }
