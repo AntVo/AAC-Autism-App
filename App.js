@@ -9,7 +9,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentBoard: 'basic',
+      currentBoard: 'default',
       // default, emotion, fun, food, animal, activity
       sentenceBar: [],
     };
