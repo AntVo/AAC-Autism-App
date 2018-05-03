@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, Image, TouchableHighlight } from 'react-native';
 
 export default class Card extends React.Component {
 
@@ -10,7 +10,7 @@ handlePress = () => {
 
 render() {
     return (
-      <TouchableHighlight onPress={this.handlePress}>
+      <TouchableHighlight onPress={this.handlePress} underlayColor='#90EE90'>
         <Image style={styles.image} source={this.props.image} />
       </TouchableHighlight>
     );

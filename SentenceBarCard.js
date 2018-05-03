@@ -14,11 +14,9 @@ render() {
 }
 
 const styles = StyleSheet.create({
-
   image: {
     height: 60,
     width: 60,
     borderWidth: 1,
   }
- 
 });

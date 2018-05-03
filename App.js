@@ -1,6 +1,5 @@
 import React from 'react';
-import { SuperGridSectionList } from 'react-native-super-grid';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SentenceBar from './SentenceBar';
 import CardsGallery from './CardsGallery';
 import BottomNavBar from './BottomNavBar';

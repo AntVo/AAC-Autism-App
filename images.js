@@ -55,11 +55,3 @@ export const things = {
 	group: require('./assets/things/group.png'),
 	home: require('./assets/things/home.png'),
 }
-
-
-
-
-
-
-
-

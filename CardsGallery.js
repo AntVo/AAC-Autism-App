@@ -12,7 +12,6 @@ export default class CardsGallery extends React.Component {
     const currentBoard = this.props.currentBoard;
 
     switch(currentBoard) {
-
       case "expression":
         return (
           Object.keys(expression).map((item, i) => (
@@ -62,11 +61,10 @@ render() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: .75,
+    flex: .65,
     backgroundColor: 'aliceblue',
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    marginTop: 20,
   },
 });
