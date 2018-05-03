@@ -4,12 +4,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import SentenceBar from './SentenceBar';
 import CardsGallery from './CardsGallery';
 import BottomNavBar from './BottomNavBar';
+import ButtonBar from './ButtonBar';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentBoard: 'default',
+      currentBoard: 'expression',
       // default, emotion, fun, food, animal, activity
       sentenceBar: [],
     };
@@ -30,11 +31,15 @@ export default class App extends React.Component {
     this.setState({ currentBoard: board });
   }
 
+  clearSentenceBar = () => {
+    this.setState({ sentenceBar: [] });
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <SentenceBar sentenceBar={this.state.sentenceBar} />
+        <ButtonBar clearSentenceBar={this.clearSentenceBar} />
         <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} currentBoard={this.state.currentBoard} />
         <BottomNavBar setBoard={this.setBoard} />
       </View>

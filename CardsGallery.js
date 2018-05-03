@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Card from './Card';
-import images from './images';
+import { activities, expression, feeling, food, things }  from './images';
+
 
 export default class CardsGallery extends React.Component {
 
@@ -11,90 +12,37 @@ export default class CardsGallery extends React.Component {
     const currentBoard = this.props.currentBoard;
 
     switch(currentBoard) {
-      case "default":
+
+      case "expression":
         return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )
-        break;
-      case "emotion":
+          Object.keys(expression).map((item, i) => (
+              <Card image={expression[item]} addCardToSentenceBar={this.props.addCardToSentenceBar} key={i}></Card>
+          )))
+
+      case "feeling":
          return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )
-        break;
-      case "fun":
+          Object.keys(feeling).map((item, i) => (
+              <Card image={feeling[item]} addCardToSentenceBar={this.props.addCardToSentenceBar} key={i}></Card>
+          )))
+
+      case "activities":
          return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.ilike} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )      
-        break;
+          Object.keys(activities).map((item, i) => (
+              <Card image={activities[item]} addCardToSentenceBar={this.props.addCardToSentenceBar} key={i}></Card>
+          )))     
+
       case "food":
          return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.ilike} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )      
-        break;
-      case "animal":
-        return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.ilike} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )     
-        break;
-      case "activity":
-        return (
-          <View style={styles.container}>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.ilike} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.isee} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.iwant} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.happy} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.thirsty} addCardToSentenceBar={this.props.addCardToSentenceBar}/>
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-            <Card image={images.i} addCardToSentenceBar={this.props.addCardToSentenceBar} />
-         </View>
-        )     
-        break;
+          Object.keys(food).map((item, i) => (
+              <Card image={food[item]} addCardToSentenceBar={this.props.addCardToSentenceBar} key={i}></Card>
+          )))     
+
+      case "things":
+          return(
+           Object.keys(things).map((item, i) => (
+              <Card image={things[item]} addCardToSentenceBar={this.props.addCardToSentenceBar} key={i}></Card>
+          )))     
+
       default:
         break;
     }
@@ -103,7 +51,7 @@ export default class CardsGallery extends React.Component {
   }
 
 
-  render() {
+render() {
     return (
       <View style={styles.container}>
         {this.renderCardsGallery()}
