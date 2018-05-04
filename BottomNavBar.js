@@ -8,10 +8,11 @@ export default class BottomNavBar extends React.Component {
 handlePress = (board) => {
   this.props.setBoard(board);
 }
-
+alphabetical
 render() {
     return (
       <View  style={styles.container} >
+        <MaterialCommunityIcon name='alphabetical' size={35} style={{ marginLeft:10, padding:5, marginRight: 10, color: "grey" }} onPress={this.handlePress.bind(this, "activities")} />
         <MaterialCommunityIcon name='account' size={35} style={{ marginLeft:10, padding:5, marginRight: 10, color: "grey" }} onPress={this.handlePress.bind(this, "expression")} />
         <MaterialCommunityIcon name='emoticon' size={35} style={{ marginLeft:10, padding:5, marginRight: 10, color: "grey" }} onPress={this.handlePress.bind(this, "feeling")} />
         <MaterialCommunityIcon name='food' size={35} style={{ marginLeft:10, padding:5, marginRight: 10, color: "grey" }} onPress={this.handlePress.bind(this, "food")} /> 

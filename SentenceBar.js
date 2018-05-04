@@ -26,7 +26,7 @@ export default class SentenceBar extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: .15,
+    flex: .16,
     backgroundColor: 'floralwhite',
     alignItems: 'center',
     justifyContent: 'flex-start',
