@@ -10,7 +10,7 @@ export const activities  = {
 }
 
 export const expression  = {
-	comfused: require('./assets/expression/confused.png'),
+	confused: require('./assets/expression/confused.png'),
   go: require('./assets/expression/go.png'),
 	good_bye: require('./assets/expression/good_bye.png'),
 	hello: require('./assets/expression/hello.png'),

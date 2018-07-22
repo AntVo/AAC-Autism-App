@@ -4,6 +4,14 @@ import Card from './Card';
 import SentenceBarCard from './SentenceBarCard';
 
 export default class SentenceBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentBoard: 'expression',
+      // default, emotion, fun, food, animal, activity
+      sentenceBar: [],
+    };
+  }
 
   renderSentenceBar = () => {
     return (

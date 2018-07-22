@@ -1,11 +1,15 @@
 import React from 'react';
+import { Constants, Speech } from 'expo';
 import { StyleSheet, Image, TouchableHighlight } from 'react-native';
-
 export default class Card extends React.Component {
 
   
 handlePress = () => {
+  console.log(this.props);;
+  Expo.Speech.stop();
   this.props.addCardToSentenceBar( this.props.image, this.props.word );
+  Expo.Speech.speak(this.props.word);
+
 }
 
 render() {

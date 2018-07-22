@@ -4,6 +4,7 @@ import SentenceBar from './SentenceBar';
 import CardsGallery from './CardsGallery';
 import BottomNavBar from './BottomNavBar';
 import ButtonBar from './ButtonBar';
+import { Constants, Speech } from 'expo';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -34,11 +35,19 @@ export default class App extends React.Component {
     this.setState({ sentenceBar: [] });
   }
 
+  listenSentenceBar = () => {
+    let sentence = "";
+    this.state.sentenceBar.forEach((item) => {
+        sentence += " " + item.word;
+    });
+    Expo.Speech.speak(sentence);
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <SentenceBar sentenceBar={this.state.sentenceBar} />
-        <ButtonBar clearSentenceBar={this.clearSentenceBar} />
+        <ButtonBar clearSentenceBar={this.clearSentenceBar} listenSentenceBar={this.listenSentenceBar} />
         <CardsGallery addCardToSentenceBar={this.addCardToSentenceBar} currentBoard={this.state.currentBoard} />
         <BottomNavBar setBoard={this.setBoard} />
       </View>
